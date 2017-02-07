@@ -17,7 +17,14 @@
 		{% endfor %}
 		</tr>
 
-
+		{% for linha in turma.linhas %}
+			<tr>
+				<td> {{linha.horario}} </td>
+				{% for aula in linha.aulas %}
+				<td> {{aula.professor}} {{disciplina}} </td>
+				{% endfor %}
+			</tr>
+		{% endfor %}
 		</table>
 
 	{% endfor %}
