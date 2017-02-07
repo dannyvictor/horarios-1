@@ -22,7 +22,7 @@ layout: default
 				<td> {{linha.horario}} </td>
 				{% for aula in linha.aulas %}
 				{% if aula.displina == "INTERVALO" %}
-				<td colspan="5"> {{aula.disciplina}} </td>
+				<td colspan="4"> {{aula.disciplina}} </td>
 				{% elsif aula.disciplina != "INTERVALO" %}
 				<td> {{aula.disciplina}} <br/> {{aula.professor}} </td>
 				{% endif %}
