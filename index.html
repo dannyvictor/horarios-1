@@ -21,7 +21,7 @@
 			<tr>
 				<td> {{linha.horario}} </td>
 				{% for aula in linha.aulas %}
-				<td> {{aula.professor}} {{disciplina}} </td>
+				<td> {{aula.disciplina}} <br/> {{aula.professor}} </td>
 				{% endfor %}
 			</tr>
 		{% endfor %}
