@@ -1,4 +1,8 @@
 ---
+
 ---
 
-{{ site.data.horarios }}
+{% for curso in site.data.horarios.cursos.nome %}
+	<h1> {{curso}} </h1>
+
+{%endfor%}
