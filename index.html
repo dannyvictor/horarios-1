@@ -2,9 +2,8 @@
 
 ---
 
-{{ site.data.horarios }}
 
-{% for curso in site.data.horarios.cursos.nome %}
-	<h1> {{curso}} </h1>
+{% for curso in site.data.horarios.cursos %}
+	<h1> {{curso.nome}} </h1>
 
 {% endfor %}
