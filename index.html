@@ -17,14 +17,13 @@ layout: default
 		</tr>
 
 		{% for linha in turma.linhas %}
+			<td><b>{{ linha.horario }}</b></td>
           		{% if linha.aulas[0].disciplina == "INTERVALO" %}
             			<tr class="intervalo">
-              			<td><b>{{ linha.horario }}</b></td>
               			<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td></tr>
           		{% else %}
 				{% if linha.aulas[0].disciplina == "ALMOÇO" or linha.aulas[0].disciplina == "JANTAR" %}
 					<tr class="reifecao">
-					<td><b>{{ linha.horario }}</b></td>
 					<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td></tr>
 				{% else %}
 					{% for aula in linha.aulas %}
