@@ -4,6 +4,7 @@ layout: default
 
 
 {% for curso in site.data.horarios.cursos %}
+<h1> {{curso.nome}} </h1>
 	{% for turma in curso.turmas %}
 		<h2> {{turma.nome}} </h2>
 
@@ -24,6 +25,7 @@ layout: default
             			<tr class="reifecao">
                                 <td><b>{{ linha.horario }}</b></td>
 				<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td></tr>
+			{% endif %}
 		{% endfor %}
 		</table>
 
