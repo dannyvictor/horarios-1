@@ -7,30 +7,26 @@ layout: default
 	{% for turma in curso.turmas %}
 		<h2> {{turma.nome}} </h2>
 
-		<table style="width=100%">
+		<table style="width=145%">
 
-		<tr>
+		<tr class = "tab">
 		{% for coluna in turma.colunas %}
 			<th>{{coluna}}</th>
 		{% endfor %}
 		</tr>
 
 		{% for linha in turma.linhas %}
-			<tr>
-				<td> <b>{{linha.horario}} </b></td>
-				
-				{% if linha.aulas[0].disciplina == "INTERVALO" or linha.aulas[0].disciplina == "ALMOÇO"
-				or linha.aulas[0].disciplina == "JANTAR" %}
-				<td colspan="5"> {{linha.aulas[0].disciplina}} </td>
-				{% else %}
-				{% for aula in linha.aulas %}
-				<td> {{aula.disciplina}} <br/> <b>{{aula.professor}}</b> </td>
-				{% endfor %}
-				{% endif %}
-				
-			</tr>
+          		{% if linha.aulas[0].disciplina == "INTERVALO" %}
+            			<tr class="intervalo">
+              			<td><b>{{ linha.horario }}</b></td>
+              			<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td></tr>
+          		{% else %}{if linha.aulas[0].disciplina == "ALMOÇO" or linha.aulas[0].disciplina == "JANTAR" %}
+            			<tr class="reifecao">
+                                <td><b>{{ linha.horario }}</b></td>
+				<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td></tr>
 		{% endfor %}
 		</table>
 
 	{% endfor %}
 {% endfor %}
+
