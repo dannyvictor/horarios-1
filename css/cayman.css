@@ -1,20 +1,7 @@
 * {
   box-sizing: border-box; }
 
-.intervalo {
-    color: white;
-    background-color: #bbbbbb;
-}
 
-.tab {
-    color: white;
-    background-color: #159957;
-}
-
-.reifeicao {
-    color: white;
-    background-color: #444;
-}
 body {
   padding: 0;
   margin: 0;
