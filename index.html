@@ -26,6 +26,10 @@ layout: default
 					<tr class="reifecao">
 					<td><b>{{ linha.horario }}</b></td>
 					<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td></tr>
+				{% else %}
+					{% for aula in linha.aulas %}
+						<td>{{aula.disciplina}} <br/> <b>{{aula.professor}}</b> </td>
+					{% endfor %}
 				{% endif %}
 			{% endif %}
 		{% endfor %}
