@@ -1,0 +1,50 @@
+---
+layout: default
+---
+{% for professor in site.data.auxiliar.professores %}
+	{% for curso in site.data.horarios.cursos %}
+	<h1> {{curso.nome}} </h1>
+		{% for turma in curso.turmas %}
+			<h2> {{turma.nome}} </h2>
+
+			<table style="width=145%">
+
+			<tr class = "tab">
+			{% for coluna in turma.colunas %}
+				<th>{{coluna}}</th>
+			{% endfor %}
+			</tr>
+
+			{% for linha in turma.linhas %}
+	          		{% if linha.aulas[0].disciplina == "INTERVALO" %}
+	            			<tr class="intervalo">
+					<td><b>{{ linha.horario }}</b></td>	
+	              			<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td></tr>
+	          		{% else %}
+					{% if linha.aulas[0].disciplina == "ALMOÇO" or linha.aulas[0].disciplina == "JANTAR" %}
+						<tr class="reifeicao">
+						<td><b>{{ linha.horario }}</b></td>	
+						<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td></tr>
+					{% else %}
+						<tr>
+						{% if linha.aulas[0].disciplina == professor}
+							<td><b>{{ linha.horario }}</b></td>
+							{% for aula in linha.aulas %}
+								<td>{{aula.disciplina}} <br/> <b>{{aula.professor}}</b> </td>
+							{% endfor %}
+							</tr>
+						{% else %}
+							<td><b>{{ linha.horario }}</b></td>
+							{% for aula in linha.aulas %}
+								<td><br/> <b></b> </td>
+							{% endfor %}
+							</tr>
+						{% endif %}
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+			</table>
+
+		{% endfor %}
+	{% endfor %}
+{% endfor %}
