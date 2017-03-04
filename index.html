@@ -31,7 +31,9 @@ layout: default
 						<tr>
 						<td><b>{{ linha.horario }}</b></td>
 						{% for aula in linha.aulas %}
-							<td>{{aula.disciplina}} <br/> <b>{{aula.professor}}</b> </td>
+							{% if aula.professor == professor %}
+								<td>{{aula.disciplina}} <br/> <b>{{aula.professor}}</b> </td>
+							{% endif %}
 						{% endfor %}
 						</tr>
 					{% endif %}
