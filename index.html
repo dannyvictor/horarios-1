@@ -34,9 +34,7 @@ layout: default
 						<tr>
 						<td><b>{{ linha.horario }}</b></td>
 						{% for aula in linha.aulas %}
-							{% if aula.professor == professorx or professorx == "Todos" or((professorx == "Nélio" or professorx == "Bruna") and 
-							aula.professor == "Nélio e Bruna") or ((professorx == "Cecília" or professorx == "Tatiana") and 
-							aula.professor == "Cecília/Tatiana") %}
+							{% if aula.professor == professorx or professorx == "Todos" %}
 								<td>{{aula.disciplina}} <br/> <b>{{aula.professor}}</b> </td>
 							{% else %}
 								<td> <br/> </td>
