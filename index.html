@@ -3,7 +3,16 @@ layout: default
 ---
 <head>
 	 <meta charset="UTF-8">
+	 <script src="js/dropdown.js"></script>
 </head>
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
 {% for professorx in site.data.auxiliar.professores %}
 	<h1> {{professorx}} </h1>
 	{% for curso in site.data.horarios.cursos %}
