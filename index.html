@@ -37,12 +37,6 @@ layout: default
 							{% if aula.professor == professorx or professorx == "Todos" %}
 								<td>{{aula.disciplina}} <br/> <b>{{aula.professor}}</b> </td>
 							{% else %}
-								{% if professorx == "Nélio" or professorx == "Bruna" and aula.disciplina == "Nélio e Bruna" %}
-									<td>{{aula.disciplina}} <br/> <b>{{aula.professor}}</b> </td>
-								{% endif %}
-								{% if professorx == "Cecília" or professorx == "Tatiana" and aula.disciplina == "Cecília/Tatiana" %}
-									<td>{{aula.disciplina}} <br/> <b>{{aula.professor}}</b> </td>
-								{% endif %}
 								<td> <br/> </td>
 							{% endif %}
 						{% endfor %}
