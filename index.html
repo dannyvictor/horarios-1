@@ -5,11 +5,19 @@ layout: default
 	 <meta charset="UTF-8">
 	 <script src="js/dropdown.js"></script>
 </head>
+<script>
+	function akuma(professor) {
+		{% for professorz in site.data.auxiliar.professores %}
+			document.getElementsByClassName('{{professorz}}').style.visiblity = "hidden";
+		{% endfor %}
+    	document.getElementById(professor).style.visibility = "visible";
+	}
+</script>
 <div class="dropdown">
 <button onclick="myFunction()" class="dropbtn">Dropdown</button>
   <div id="myDropdown" class="dropdown-content">
 	{% for professorb in site.data.auxiliar.professores %}
-		<p onclick="document.getElementById('{{professorb}}').style.visibility = 'visible'">>{{professorb}} </p>
+		<p onclick="akuma('{{professorb}}')">{{professorb}} </p>
 	{% endfor %}
   </div>
 </div>
