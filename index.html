@@ -8,7 +8,7 @@ layout: default
 <script>
 	function akuma(professor) {
 		{% for professorz in site.data.auxiliar.professores %}
-		document.getElementsById('{{professorz}}').style.visibility = "hidden";
+		document.getElementsById("{{professorz}}").style.visibility = "hidden";
 		{% endfor %}
     	document.getElementById(professor).style.visibility = "visible";
 	}
