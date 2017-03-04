@@ -2,7 +2,7 @@
 layout: default
 ---
 {% for professor in site.data.auxiliar.professores %}
-	<h1> {{professor}}
+	<h1> {{professor}} </h1>
 	{% for curso in site.data.horarios.cursos %}
 		<h2> {{curso.nome}} </h2>
 		{% for turma in curso.turmas %}
@@ -17,15 +17,16 @@ layout: default
 			</tr>
 
 			{% for linha in turma.linhas %}
-					{% if linha.aulas[0].disciplina == "INTERVALO" %}
-							<tr class="intervalo">
+				{% if linha.aulas[0].disciplina == "INTERVALO" %}
+					<tr class="intervalo">
 					<td><b>{{ linha.horario }}</b></td>	
-							<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td></tr>
-					{% else %}
+					<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td></tr>
+				{% else %}
 					{% if linha.aulas[0].disciplina == "ALMOÇO" or linha.aulas[0].disciplina == "JANTAR" %}
 						<tr class="reifeicao">
 						<td><b>{{ linha.horario }}</b></td>	
-						<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td></tr>
+						<td colspan="5"><b>{{ linha.aulas[0].disciplina }}</b></td>
+						</tr>
 					{% else %}
 						<tr>
 						<td><b>{{ linha.horario }}</b></td>
@@ -37,7 +38,6 @@ layout: default
 				{% endif %}
 			{% endfor %}
 			</table>
-
 		{% endfor %}
 	{% endfor %}
 {% endfor %}
