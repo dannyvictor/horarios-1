@@ -36,10 +36,9 @@
 }
 
 .dropdown {
-    position: absolute;
-    display: block;
-    top: 373px;
-    left:0;
+    position: relative;
+    display: inline-block;
+    
     
 }
 
