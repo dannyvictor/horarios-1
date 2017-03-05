@@ -36,8 +36,11 @@
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+    position: absolute;
+    display: block;
+    top: 373px;
+    left:0;
+    
 }
 
 .dropdown-content {
