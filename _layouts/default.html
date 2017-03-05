@@ -24,9 +24,6 @@
     </section>
 <script>
 	function akuma(professor) {
-	{% for professorzx in site.data.auxiliar.professores %}
-      document.getElementById({{professorzx}}).style.visibility = "hidden";
-	{% endfor %}
     	document.getElementById(professor).style.visibility = "visible";
 	}
 </script>
