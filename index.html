@@ -1,24 +1,7 @@
 ---
 layout: default
 ---
-<head>
-	 <meta charset="UTF-8">
-	 <script src="js/dropdown.js"></script>
-</head>
-<script>
-	function akuma(professor) {
-    	document.getElementById(professor).style.visibility = "visible";
-	}
-</script>
-<div class="dropdown">
-<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-	{% for professorb in site.data.auxiliar.professores %}
-		<p onclick="akuma('{{professorb}}')">{{professorb}} </p>
-	{% endfor %}
-  </div>
-</div>
+
 {% for professorx in site.data.auxiliar.professores %}
 	<div class="professory" id="{{professorx}}" style="visibility: hidden">
 	<h1> {{professorx}} </h1>
