@@ -24,12 +24,9 @@
     </section>
 <script>
 	function akuma(professor) {
-		var prof;
-		prof = document.getElementsByClassName("professory");
-		for (var i = 0; i < prof.lenght; i++ ){
-			prof[i].style.visibility = "hidden";
-      console.log(prof[i]);
-		}
+	{% for professorzx in site.data.auxiliar.professores %}
+      document.getElementById({{professorzx}}).style.visibility = "hidden";
+	{% endfor %}
     	document.getElementById(professor).style.visibility = "visible";
 	}
 </script>
