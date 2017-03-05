@@ -10,6 +10,7 @@
      <link rel="stylesheet" href="css/decor.css">
     <link rel="stylesheet" href="css/cayman.css">
     <link rel="icon" type="image/png" href="logo_if.png">
+    <script src="js/dropdown.js"></script>
   </head>
   <body>
     <section class="page-header">
@@ -21,8 +22,20 @@
       <a href="#" class="btn">Contabilidade</a>
       <a href="#" class="btn">Gestão Comercial</a>
     </section>
-    
-    
+<script>
+	function akuma(professor) {
+    	document.getElementById(professor).style.visibility = "visible";
+	}
+</script>
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+	{% for professorb in site.data.auxiliar.professores %}
+		<p onclick="akuma('{{professorb}}')">{{professorb}} </p>
+	{% endfor %}
+  </div>
+</div>
     
     <section class="main-content">
       
