@@ -12,7 +12,6 @@ layout: default
 			<h3> {{turma.nome}} </h3>
 
 			<table style="width=145%">
-			<tbody style= "width=952px" "height=1245.2px">
 			<tr class = "tab">
 			{% for coluna in turma.colunas %}
 				<th>{{coluna}}</th>
@@ -44,7 +43,7 @@ layout: default
 					{% endif %}
 				{% endif %}
 			{% endfor %}
-			</tbody>
+			
 			</table>
 		{% endfor %}
 	{% endfor %}
