@@ -6,7 +6,7 @@ layout: default
 	<div class="DivOP" id="{{professorx}}" style="display: none">
 	<h1> {{professorx}} </h1>
 	{% for curso in site.data.horarios.cursos %}
-		<h2> <a id={{curso | remove: " "}}>{{curso.nome}} </a></h2>
+		<h2> <a id={{curso.nome | remove: " "}}>{{curso.nome}} </a></h2>
 		{% for turma in curso.turmas %}
 			
 			<h3> {{turma.nome}} </h3>
