@@ -24,6 +24,14 @@
     </section>
 <script>
 	function akuma(professor) {
+      var classes = document.getElementsByClassName("DivOP");
+      var i, davez;
+      for (i = 0; i < classes.length; i++){
+        davez = classes[i];
+        if (davez.style.visibility == "visible"){
+          document.getElementById(davez.id).style.visibility = "hidden";
+        }
+      }
     	document.getElementById(professor).style.visibility = "visible";
 	}
 </script>
