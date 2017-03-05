@@ -17,10 +17,10 @@
       <h1 class="project-name">IFPB - Campus Guarabira</h1>
       <h2>Horários</h2>
       <br>
-      <a href="#" class="btn">Informática</a>
-      <a href="#" class="btn">Edificações</a>
-      <a href="#" class="btn">Contabilidade</a>
-      <a href="#" class="btn">Gestão Comercial</a>
+      <a href="#Informática" class="btn">Informática</a>
+      <a href="#Edificações" class="btn">Edificações</a>
+      <a href="#Contabilidade" class="btn">Contabilidade</a>
+      <a href="#GestãoComercial" class="btn">Gestão Comercial</a>
     </section>
 <script>
 	function akuma(professor) {
@@ -28,11 +28,11 @@
       var i, davez;
       for (i = 0; i < classes.length; i++){
         davez = classes[i];
-        if (davez.style.visibility == "visible"){
-          document.getElementById(davez.id).style.visibility = "hidden";
+        if (davez.style.display != "none"){
+          document.getElementById(davez.id).style.display = "none";
         }
       }
-    	document.getElementById(professor).style.visibility = "visible";
+    	document.getElementById(professor).style.display = "block";
 	}
 </script>
 <br/>
