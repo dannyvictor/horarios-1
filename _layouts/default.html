@@ -21,6 +21,15 @@
       <a href="#Edificações" class="btn">Edificações</a>
       <a href="#Contabilidade" class="btn">Contabilidade</a>
       <a href="#GestãoComercial" class="btn">Gestão Comercial</a>
+	    <div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Professores</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+	{% for professorb in site.data.auxiliar.professores %}
+		<p onclick="akuma('{{professorb}}')">{{professorb}} </p>
+	{% endfor %}
+  </div>
+</div>
     </section>
 <script>
 	function akuma(professor) {
@@ -36,15 +45,6 @@
 	}
 </script>
 <br/>
-<div class="dropdown">
-<button onclick="myFunction()" class="dropbtn">Professores</button>
-  <div id="myDropdown" class="dropdown-content">
-    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-	{% for professorb in site.data.auxiliar.professores %}
-		<p onclick="akuma('{{professorb}}')">{{professorb}} </p>
-	{% endfor %}
-  </div>
-</div>
     
     <section class="main-content">
       
